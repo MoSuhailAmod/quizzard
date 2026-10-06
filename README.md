@@ -30,7 +30,9 @@ The files in `dist/` can be served by any basic static web server.
 ```
 src/
   index.html, styles.css, main.js   the app: screens and subject selection
-  quiz.js                           the quiz (placeholder until the quiz issue)
+  quiz.js                           the quiz screen: 10 questions, one at a time
+  quiz-logic.js                     quiz rules with no DOM: picking questions, answers, navigation
+  results.js                        marking and results (placeholder until the next issue)
   data/questions/                   static question bank (one file per subject)
     schema.js                       question format and validation rules
     index.js                        registers subject files, filter-by-subject helpers
@@ -39,7 +41,8 @@ scripts/
   serve.mjs                         tiny static file server
   validate.mjs                      question bank validation
   build.mjs                         validates, then copies src/ to dist/
-  schema.test.mjs                   tests for the validation rules
+  schema.test.mjs, bank.test.mjs    tests for the validation rules and the English bank
+  quiz.test.mjs                     tests for the quiz rules
 ```
 
 ## Content rule

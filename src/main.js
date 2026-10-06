@@ -1,6 +1,7 @@
 // Screen switching and subject selection. The quiz itself lives in quiz.js.
 import { getSubjects } from "./data/questions/index.js";
 import { startQuiz } from "./quiz.js";
+import { showResults } from "./results.js";
 
 const screens = {
   home: document.getElementById("home"),
@@ -24,7 +25,10 @@ function showSubjects() {
       button.textContent = subject;
       button.addEventListener("click", () => {
         show("quiz");
-        startQuiz(subject, screens.quiz, showSubjects);
+        startQuiz(subject, screens.quiz, {
+          onExit: showSubjects,
+          onSubmit: (quiz) => showResults(quiz, screens.quiz, showSubjects),
+        });
       });
       return button;
     }),
