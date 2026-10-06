@@ -9,16 +9,19 @@
 <body>
   <main class="app">
     <section id="home" class="screen">
-      <h1>Quizzard</h1>
+      <h1 tabindex="-1">Quizzard</h1>
       <p class="tagline">Grade 12 practice quizzes</p>
       <button id="start" type="button" class="primary">Start practising</button>
     </section>
 
-    <section id="practise" class="screen" hidden>
-      <h2>Choose a subject</h2>
-      <p id="practise-message">Subjects will appear here once questions are added to the question bank.</p>
+    <section id="subjects-screen" class="screen" hidden>
+      <h2 tabindex="-1">Choose a subject</h2>
+      <p id="subjects-empty" hidden>No questions are available yet.</p>
+      <div id="subjects" class="subjects"></div>
       <button id="back" type="button">Back</button>
     </section>
+
+    <section id="quiz" class="screen" hidden></section>
   </main>
   <script type="module" src="main.js"></script>
 </body>

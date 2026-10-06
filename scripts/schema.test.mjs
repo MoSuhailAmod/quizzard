@@ -90,4 +90,5 @@ test("questions can be filtered by subject", () => {
   assert.deepEqual(getSubjects(list), ["Test Subject", "Other"]);
   assert.deepEqual(getQuestionsBySubject("Test Subject", list).map((q) => q.id), ["t-001", "t-003"]);
   assert.deepEqual(getQuestionsBySubject("Missing", list), []);
+  assert.deepEqual(getSubjects([]), [], "a bank with no questions shows no subjects");
 });
