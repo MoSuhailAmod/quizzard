@@ -26,6 +26,10 @@ Use another port with `PORT=4000 npm start` (PowerShell: `$env:PORT=4000; npm st
 
 The files in `dist/` can be served by any basic static web server.
 
+## Deploy
+See [`docs/deploy.md`](docs/deploy.md) for hosting it in an LXC container and sharing it over Tailscale
+(no public exposure), including how to re-publish after changing questions and how to take it down.
+
 ## Project structure
 ```
 src/
@@ -38,6 +42,8 @@ src/
     schema.js                       question format and validation rules
     index.js                        registers subject files, filter-by-subject helpers
     README.md                       how to add questions: read this first
+deploy/
+  nginx-quizzard.conf               nginx site for the LXC container
 scripts/
   serve.mjs                         tiny static file server
   validate.mjs                      question bank validation
