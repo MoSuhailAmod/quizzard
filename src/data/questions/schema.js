@@ -18,7 +18,8 @@ const FIELDS = ["id", "subject", "question", "options", "correctAnswer", "origin
  */
 
 const isText = (value) => typeof value === "string" && value.trim() !== "";
-const normalise = (text) => text.trim().replace(/\s+/g, " ").toLowerCase();
+const squash = (text) => text.trim().replace(/\s+/g, " ");
+const normalise = (text) => squash(text).toLowerCase();
 
 /**
  * Returns a list of human-readable problems. An empty list means the data is valid.
@@ -56,8 +57,8 @@ export function validateQuestions(questions) {
       problem("options must be an array of exactly 4 items.");
     } else if (!q.options.every(isText)) {
       problem("every option must be non-empty text.");
-    } else if (new Set(q.options.map(normalise)).size !== 4) {
-      problem("options must all be different.");
+    } else if (new Set(q.options.map(squash)).size !== 4) {
+      problem("options must all be different (capital letters and punctuation count).");
     }
 
     if (!Number.isInteger(q.correctAnswer) || q.correctAnswer < 0 || q.correctAnswer > 3) {

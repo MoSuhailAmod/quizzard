@@ -56,3 +56,10 @@ outside it. A `generated` question must be reviewed by the user before it is mer
 and different options, `correctAnswer` 0-3, a known `origin`, a `source`, no unknown fields, and no
 duplicate question within a subject. It also checks that every subject file is registered in
 `index.js`. `npm run build` runs the same check first and stops if anything is wrong.
+
+## Current subjects
+
+- **English (Home Language)**: `english.js`. Built from the official NSC English HL Paper 1 papers and
+  memos, November 2014 to May/June 2026. Sessions before November 2014 are excluded because they
+  pre-date CAPS for Grade 12. Only self-contained language-structure questions are used, because
+  comprehension and visual-literacy questions need a passage, picture or cartoon.
