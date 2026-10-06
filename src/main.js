@@ -11,6 +11,7 @@ const screens = {
 
 function show(name) {
   for (const [key, el] of Object.entries(screens)) el.hidden = key !== name;
+  window.scrollTo(0, 0);
   screens[name].querySelector("h1, h2")?.focus();
 }
 

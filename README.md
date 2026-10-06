@@ -32,7 +32,8 @@ src/
   index.html, styles.css, main.js   the app: screens and subject selection
   quiz.js                           the quiz screen: 10 questions, one at a time
   quiz-logic.js                     quiz rules with no DOM: picking questions, answers, navigation
-  results.js                        marking and results (placeholder until the next issue)
+  marking.js                        marking rules with no DOM: score, percentage, review
+  results.js                        the results screen: score and review of every question
   data/questions/                   static question bank (one file per subject)
     schema.js                       question format and validation rules
     index.js                        registers subject files, filter-by-subject helpers
@@ -42,7 +43,7 @@ scripts/
   validate.mjs                      question bank validation
   build.mjs                         validates, then copies src/ to dist/
   schema.test.mjs, bank.test.mjs    tests for the validation rules and the English bank
-  quiz.test.mjs                     tests for the quiz rules
+  quiz.test.mjs, marking.test.mjs   tests for the quiz and marking rules
 ```
 
 ## Content rule
