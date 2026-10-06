@@ -41,7 +41,9 @@ test("requires exactly four non-empty, distinct options", () => {
   assert.equal(problemsFor({ options: ["A", "B", "C"] }).length, 1);
   assert.equal(problemsFor({ options: ["A", "B", "C", "D", "E"] }).length, 1);
   assert.equal(problemsFor({ options: ["A", "B", "C", ""] }).length, 1);
-  assert.equal(problemsFor({ options: ["A", "B", "C", " a "] }).length, 1);
+  assert.equal(problemsFor({ options: ["A", "B", "C", "  A "] }).length, 1);
+  // Capitalisation and punctuation can be the whole point of a language question, so they count as different.
+  assert.deepEqual(problemsFor({ options: ["She left; she won.", "She left; She won.", "She left, she won.", "She left. she won."] }), []);
   assert.equal(problemsFor({ options: "ABCD" }).length, 1);
 });
 
