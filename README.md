@@ -29,7 +29,8 @@ The files in `dist/` can be served by any basic static web server.
 ## Project structure
 ```
 src/
-  index.html, styles.css, main.js   the app
+  index.html, styles.css, main.js   the app: screens and subject selection
+  quiz.js                           the quiz (placeholder until the quiz issue)
   data/questions/                   static question bank (one file per subject)
     schema.js                       question format and validation rules
     index.js                        registers subject files, filter-by-subject helpers
