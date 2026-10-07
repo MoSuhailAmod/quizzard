@@ -63,3 +63,10 @@ duplicate question within a subject. It also checks that every subject file is r
   memos, November 2014 to May/June 2026. Sessions before November 2014 are excluded because they
   pre-date CAPS for Grade 12. Only self-contained language-structure questions are used, because
   comprehension and visual-literacy questions need a passage, picture or cartoon.
+
+- **Physics (Physical Sciences Paper 1)**: `physics.js`. Built from the official NSC Physical Sciences
+  P1 (Physics) papers and memos, November 2014 to May/June 2026. Question 1 multiple-choice items and
+  written-answer questions (definitions, short conceptual items and calculations) are used only when
+  they can be answered from their own text. Anything that needs a diagram, graph or circuit drawing
+  is excluded, and so are questions where the memo's own answer looked wrong. Numeric answers were
+  recomputed against the memo.

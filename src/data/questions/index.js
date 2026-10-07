@@ -4,11 +4,12 @@
 // `npm run validate` fails if a subject file in this folder is missing from the `subjectFiles` list.
 
 import english from "./english.js";
+import physics from "./physics.js";
 
-export const subjectFiles = ["english.js"];
+export const subjectFiles = ["english.js", "physics.js"];
 
 /** @type {import("./schema.js").Question[]} */
-export const questions = [...english];
+export const questions = [...english, ...physics];
 
 /** Distinct subjects that have at least one question, in the order they first appear. */
 export function getSubjects(list = questions) {
