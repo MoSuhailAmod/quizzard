@@ -48,7 +48,7 @@ scripts/
   serve.mjs                         tiny static file server
   validate.mjs                      question bank validation
   build.mjs                         validates, then copies src/ to dist/
-  schema.test.mjs, bank.test.mjs    tests for the validation rules and the English bank
+  schema.test.mjs, bank.test.mjs    tests for the validation rules and the sourcing of each subject
   quiz.test.mjs, marking.test.mjs   tests for the quiz and marking rules
 ```
 
