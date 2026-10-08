@@ -70,3 +70,9 @@ duplicate question within a subject. It also checks that every subject file is r
   they can be answered from their own text. Anything that needs a diagram, graph or circuit drawing
   is excluded, and so are questions where the memo's own answer looked wrong. Numeric answers were
   recomputed against the memo.
+
+- **Chemistry (Physical Sciences Paper 2)**: `chemistry.js`. Built from the official NSC Physical Sciences
+  P2 (Chemistry) papers and memos, November sessions 2014 to 2025 only (May/June and Feb/March sessions
+  were not used). Question 1 multiple-choice items and written-answer questions are used only when
+  they can be answered from their own text. Anything that needs a structural formula, graph or
+  apparatus diagram is excluded. Numeric answers were recomputed against the memo.

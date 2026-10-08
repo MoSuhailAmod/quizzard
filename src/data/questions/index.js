@@ -5,11 +5,12 @@
 
 import english from "./english.js";
 import physics from "./physics.js";
+import chemistry from "./chemistry.js";
 
-export const subjectFiles = ["english.js", "physics.js"];
+export const subjectFiles = ["english.js", "physics.js", "chemistry.js"];
 
 /** @type {import("./schema.js").Question[]} */
-export const questions = [...english, ...physics];
+export const questions = [...english, ...physics, ...chemistry];
 
 /** Distinct subjects that have at least one question, in the order they first appear. */
 export function getSubjects(list = questions) {

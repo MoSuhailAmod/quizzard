@@ -7,6 +7,7 @@ import { questions, getSubjects, getQuestionsBySubject } from "../src/data/quest
 const subjects = {
   English: /^NSC( |\/SC )(November|May\/June|Feb\/March) 20\d\d, English HL P1, Q\d+(\.\d+)*$/,
   Physics: /^NSC( |\/SC )(November|May\/June|Feb\/March) 20\d\d, Physical Sciences P1 \(Physics\), Q\d+(\.\d+)*( and \d+(\.\d+)*)?$/,
+  Chemistry: /^NSC( |\/SC )(November|May\/June|Feb\/March) 20\d\d, Physical Sciences P2 \(Chemistry\), Q\d+(\.\d+)*( and \d+(\.\d+)*)?$/,
 };
 
 test("every subject in the bank has a sourcing rule in this test", () => {
